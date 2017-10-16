@@ -8,30 +8,24 @@ namespace employeeManager.web.Controllers
 {
     public class HomeController : Controller
     {
-        public string SayHello()
+        public ActionResult Index()
         {
-            return "Hello";
+            // View() is returning something called the conventional view.
+            return View();
+        }
+
+        public ActionResult About()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
         }
     }
-    //public class HomeController : Controller
-    //{
-    //    public ActionResult Index()
-    //    {
-    //        return View();
-    //    }
-
-    //    public ActionResult About()
-    //    {
-    //        ViewBag.Message = "Your application description page.";
-
-    //        return View();
-    //    }
-
-    //    public ActionResult Contact()
-    //    {
-    //        ViewBag.Message = "Your contact page.";
-
-    //        return View();
-    //    }
-    //}
-}
+ }
